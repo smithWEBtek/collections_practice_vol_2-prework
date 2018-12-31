@@ -57,17 +57,34 @@ def find_cool(array)
   container
 end
 
+
+# ([{:name => "blake", :count => 2}, {:name => "ashley", :count => 1}])
+
 def count_elements(array)
-  array.each do |original_hash|
-    original_hash[:count] = 0
-    name = original_hash[:name]
-    array.each do |hash|
-      if hash[:name] == name
-        original_hash[:count] += 1
-      end
-    end
-  end.uniq
-end
+	  array.each do |original_hash|
+	    original_hash[:count] = 0
+	    name = original_hash[:name]
+	    array.each do |hash|
+	      if hash[:name] == name
+	        original_hash[:count] += 1
+	      end
+	    end
+	  end.uniq
+	end
+	
+	
+	# def count_elements(words)
+	# 	words.each do |key|
+	# 		key[:count] = 0
+	# 		name = key[:name]
+	# 		words.each do |hash|
+	# 			if hash[:name] == name
+	# 				key[:count] +=1
+	# 			end
+	# 		end
+	# 	end.uniq
+	# end
+
 
 def merge_data(keys, values)
 	
